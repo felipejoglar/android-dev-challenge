@@ -4,7 +4,7 @@
 [![fjoglar twitter](https://img.shields.io/badge/twitter-@felipejoglar-blue.svg)](http://twitter.com/felipejoglar)
 [![Platform Android](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
 
-This repository contains the exercises done through the Android Dev Challenge from Udacity & Google.
+This repository contains the exercises done through the Android Dev Challenge from Udacity & Google. In this course are used two repositories, one for the [Exercises](https://github.com/udacity/ud851-Exercises) and other for [Project Sunshine](https://github.com/udacity/ud851-Sunshine), a weather app.
 
 It also contains a serie of articles with resources and articles to deepen into the topics learned.
 
