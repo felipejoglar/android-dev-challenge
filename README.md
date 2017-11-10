@@ -6,7 +6,7 @@
 
 This repository contains the exercises done through the Android Dev Challenge from Udacity & Google. In this course are used two repositories, one for the [Exercises](https://github.com/udacity/ud851-Exercises) and other for [Project Sunshine](https://github.com/udacity/ud851-Sunshine), a weather app.
 
-It also contains a serie of articles with resources and articles to deepen into the topics learned.
+It also contains a [serie of articles](https://github.com/fjoglar/android-dev-challenge#resources) with resources and articles to deepen into the topics learned.
 
 ![Google Developer Challenge Scholarship badge](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/android-dev-challenge-badge.png)
 
@@ -27,7 +27,7 @@ It also contains a serie of articles with resources and articles to deepen into 
 
 ## Resources
 
-* [Lesson 1 - Introduction]()
+* [Lesson 1 - Introduction](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-01-welcome.md)
 
 
 ## License
