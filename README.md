@@ -28,6 +28,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 ## Resources
 
 * [Lesson 1 - Introduction](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-01-welcome.md)
+* [Lesson 2 - Project Sunshine](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-02-project-sunshine.md)
 
 
 ## License
