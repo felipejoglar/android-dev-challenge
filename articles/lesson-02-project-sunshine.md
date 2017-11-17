@@ -19,7 +19,7 @@ In this first lesson we are introduces to the Android development enviroment and
 
 ## Installing Android Studio
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-studio-logo.png" width="175" align="left" hspace="20">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-studio-logo.png" width="200" align="left" hspace="10">
 
 The first part when we are beginning in the Android world is preparing our development enviroment.
 
@@ -34,7 +34,7 @@ After installing both tools is a good practice to setup your environment variabl
 
 ## Introduction to git and Github
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/git-github-logo.png" width="300" align="right" hspace="20">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/git-github-logo.png" width="350" align="right" hspace="10">
 
 Git and GitHub are two powerfull tools for us developers, knowing how to use this .
 
@@ -68,7 +68,7 @@ To maintain your application along with each Android release, you should increas
 
 ## Android Software Stack
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-software-stack.png" width="300" align="right" hspace="20">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-software-stack.png" width="325" align="right" hspace="10">
 
 Many of us have always listen that Android is an Operating System (OS), but the reality is that Android is what is called a Software Stack.
 
@@ -130,7 +130,7 @@ These XML layout files provides the system with detailed information about what 
 
 An example of XML layout:
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/xml-layout-example.png" width="275" align="right" hspace="20">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/xml-layout-example.png" width="250" align="right" hspace="10">
 
 ``` xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -151,7 +151,7 @@ An example of XML layout:
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="What a beatiful landscape!"
+        android:text="What a beautiful landscape!"
         android:textSize="26sp" />
 </LinearLayout>
 ```
