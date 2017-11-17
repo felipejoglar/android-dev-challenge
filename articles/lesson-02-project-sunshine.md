@@ -2,7 +2,7 @@
 
 ![Lesson 2 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-2-banner.png)
 
-In this first lesson we are introduces to the Android development enviroment and start play with Android Studio creating new projects, how actually Android works and start designing our firsts activities. Lets go!
+In this first lesson we are introduced to the Android development enviroment and we start playing with Android Studio creating new projects, we are also introduced to how actually Android works and we start designing our firsts activities. Lets go!
 
 ## Index
 
@@ -36,7 +36,7 @@ After installing both tools is a good practice to setup your environment variabl
 
 <img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/git-github-logo.png" width="350" align="right" hspace="10">
 
-Git and GitHub are two powerfull tools for us developers, knowing how to use this .
+Git and GitHub are two powerfull tools for us developers, knowing how to use this is a really good point to grow fast, experiment, and keep track of all of our work.
 
 Git is a *Version Control System* (VCS) that lots of developers use to collaborate with others, ensure every line of code ever written on a project is saved. One of the many git features is that every git directory has a full history of what happened while we can still have many code versions in different places. This allows us to go back in time to whatever state of our project we have commited.
 
@@ -70,7 +70,7 @@ To maintain your application along with each Android release, you should increas
 
 <img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-software-stack.png" width="325" align="right" hspace="10">
 
-Many of us have always listen that Android is an Operating System (OS), but the reality is that Android is what is called a Software Stack.
+Many of us have always listened that Android is an Operating System (OS), but the reality is that Android is what is called a Software Stack.
 
 What does that mean? According to this [StackOverflow thread](https://stackoverflow.com/questions/10283725/what-is-difference-between-software-stack-and-os-why-android-is-not-an-os-but/10283825#10283825), the OS is the core kernel of the system and the Software Stack is the software sitting on top of the kernel which enhances and expands the functionality of the system.
 
@@ -91,7 +91,7 @@ But before entering to know the activities, we will make an introduction to how 
 
 - ### App
 
-Android apps are a *collection of components* that work with each other and with Android framework. They can be written using Kotlin, Java, and C++ languages. The Android SDK tools compile your code along with any data and resource files into an APK, an Android package, which is an archive file with an .apk suffix. One APK file contains all the contents of an Android app and is the file that Android-powered devices use to install the app.
+Android apps are a *collection of components* that work with each other and with Android framework. They can be written using Kotlin, Java, and C++ languages. The Android SDK tools compile our code along with any data and resource files into an APK, an Android package, which is an archive file with an .apk suffix. One APK file contains all the contents of an Android app and is the file that Android-powered devices use to install the app.
 
 Each Android app lives in its own *security sandbox*, protected by the Android security features.
 
@@ -99,21 +99,21 @@ The Android system implements *the principle of least privilege*. That is, each 
 
 - ### App components
 
-App components are the *essential building blocks* of an Android app. Each component is an entry point through which the system or a user can enter your app. Some components depend on others.
+App components are the *essential building blocks* of an Android app. Each component is an entry point through which the system or a user can enter our app. Some components depend on others.
 
 There are four different types of app components. Each type serves a distinct purpose and has a distinct lifecycle that defines how the component is created and destroyed. These components are:
 
 - **Activities**. An activity is the *entry point for interacting with the user*. It represents a single screen with a user interface.
 - **Services**. A service is a general-purpose entry point for keeping an app running in the background for all kinds of reasons. It is a component that runs in the background to perform long-running operations or to perform work for remote processes. *A service does not provide a user interface*.
 - **Broadcast receivers**. A broadcast receiver is a component that enables the system to deliver events to the app outside of a regular user flow, *allowing the app to respond to system-wide broadcast announcements*.
-- **Content providers**. A content provider manages a shared set of app data that you can store in the file system, in a SQLite database, on the web, or on any other persistent storage location that your app can access. Through the content provider, other apps can query or modify the data if the content provider allows it.
+- **Content providers**. A content provider manages a shared set of app data that we can store in the file system, in a SQLite database, on the web, or on any other persistent storage location that our app can access. Through the content provider, other apps can query or modify the data if the content provider allows it.
 
 - ### Activity
 
-*An activity is a single, focused thing that the user can do*. Almost all activities interact with the user, so the `Activity` class takes care of creating a window for you in which you can place your UI with `setContentView(View)`. While activities are often presented to the user as full-screen windows, they can also be used in other ways: as floating windows or embedded inside of another activity (using `ActivityGroup`). There are two methods almost all subclasses of Activity will implement:
+*An activity is a single, focused thing that the user can do*. Almost all activities interact with the user, so the `Activity` class takes care of creating a window for us in which we can place your UI with `setContentView(View)`. While activities are often presented to the user as full-screen windows, they can also be used in other ways: as floating windows or embedded inside of another activity (using `ActivityGroup`). There are two methods almost all subclasses of Activity will implement:
 
-- `onCreate(Bundle)` is where you *initialize* your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically.
-- `onPause()` is where you deal with the user *leaving* your activity.
+- `onCreate(Bundle)` is where we *initialize* our activity. Most importantly, here we will usually call `setContentView(int)` with a layout resource defining our UI, and using `findViewById(int)` to retrieve the widgets in that UI that we need to interact with programmatically.
+- `onPause()` is where we deal with the user *leaving* our activity.
 
 - ### References
 [Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html)<br>
@@ -122,7 +122,7 @@ There are four different types of app components. Each type serves a distinct pu
 
 ## Layouts
 
-As we have seen before an activity is a single focused thing that the user can do. Activities are responsible for creating the window that your application uses to draw and receive events from the system. Activities are written in Java, extending from the Activity class.
+As we have seen before an activity is a single focused thing that the user can do. Activities are responsible for creating the window that our application uses to draw and receive events from the system. Activities are written in Java (or Kotlin), extending from the Activity class.
 
 An activity creates views to show the user information, and to let the user interact with the activity. Views are a class in the Android UI framework. They occupy a rectangular area on the screen and are responsible for drawing and handling events. An activity determines what views to create (and where to put them), by reading an *XML layout file*. These XML files, are stored in the res folder inside the folder labeled layouts.
 
@@ -157,12 +157,12 @@ An example of XML layout:
 ```
 
 There are two fundamental types of `View` components. The *UI (User Interface) components* that are often interactive, the [`android.widget`](https://developer.android.com/reference/android/widget/package-summary.html) package contains a list of most of the UI view classes available to us. The *container components*, they extend from a class called `ViewGroup`. They are primarily responsible for containing a group of views and determining where they are on screen. What do we mean by "containing a group of views?". We mean that a view will be nested inside the tag of another view, like the `LinearLayout` containing an `ImageView` and a `TextView` in the example above.<br> 
-We also may note that layout views can be nested in one another, so you can nest a LinearLayout inside of a LinearLayout if you so choose.
+We also may note that layout views can be nested in one another, so we can nest a LinearLayout inside of a LinearLayout if we so choose.
 
 Views have *attributes* in XML which control the properties of the view. The properties are things like `textSize` and `padding`. Every view has a handful of properties associated with them, which can be found on their documentation pages. These properties can be set to different values. Properties determine the specifics of how a view looks and interacts.
 
 But, **how do we have access to these views from Java Activities**?<br>
-After we create our XML Layout you need to associate it with your activity. This is done in the `onCreate` method of the `Activity` using the method `setContentView`. You pass a reference to the layout file as `R.layout.name_of_layout`. For example, if our layout from the above example were named activity_main.xml this would look like:
+After we create our XML Layout you need to associate it with your activity. This is done in the `onCreate` method of the `Activity` using the method `setContentView`. We pass a reference to the layout file as `R.layout.name_of_layout`. For example, if our layout from the above example were named activity_main.xml this would look like:
 
 ``` java
 public class MainActivity extends AppCompatActivity {
@@ -188,9 +188,9 @@ public class MainActivity extends AppCompatActivity {
 
 So what are those R.layout or R.id things, and what is setContentView actually doing?
 
-*The R Class*. When your application is compiled the R class is generated. It creates constants that allow you to dynamically identify the various contents of the res folder, including layouts.
+*The R Class*. When our application is compiled the R class is generated. It creates constants that allow us to dynamically identify the various contents of the res folder, including layouts.
 
-`setContentView`. This method inflates the layout. Essentially what happens is that Android reads your XML file and generates Java objects for each of the tags in your layout file. You can then edit these objects in the Java code by calling methods on the Java objects (like `TextView.setText(String text)`).
+`setContentView`. This method inflates the layout. Essentially what happens is that Android reads our XML file and generates Java objects for each of the tags in your layout file. We can then edit these objects in the Java code by calling methods on the Java objects (like `TextView.setText(String text)`).
 
 To finish we must keep in mind that designing User Interfaces is not a trivial task. We need to make it look beautiful, accesible, with multiple screen availability, responsive, etc. There is a full extensive guideline of [Material Design](https://material.io/guidelines/) that help designers and developers go through it.
 
