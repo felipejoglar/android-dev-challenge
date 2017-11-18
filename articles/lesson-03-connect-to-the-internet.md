@@ -10,7 +10,6 @@
 - [Resources](#resources)
 - [Menus](#menus)
 - [Fetching HTTP request](#fetching-http-request)
-  - [Build URL](#build-url)
 - [Permissions](#permissions)
 - [Threading basics](#threading-basics)
 - [AsyncTask](#asynctask)
@@ -39,7 +38,7 @@ The Log class allows us to create log messages that appear in logcat. Generally,
 
 ## Toasts
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-studio-logo.png" width="300" align="right" hspace="10">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/toast.png" width="300" align="right" hspace="10">
 
 A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. Toasts automatically disappear after a timeout.
 
