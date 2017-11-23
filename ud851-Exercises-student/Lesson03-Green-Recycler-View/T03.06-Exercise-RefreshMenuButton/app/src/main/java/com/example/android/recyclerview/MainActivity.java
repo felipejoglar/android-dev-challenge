@@ -19,6 +19,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,19 +71,35 @@ public class MainActivity extends AppCompatActivity {
         mNumbersList.setAdapter(mAdapter);
     }
 
-    // TODO (2) Create a menu resource in res/menu/ called main.xml
-    // TODO (3) Add one item to the menu with an ID of action_refresh
-    // TODO (4) Set the title of the menu item to "Refresh" using strings.xml
-    // TODO (5) Set the orderInCategory value to 1 to make sure this item is the first in the list
-    // TODO (6) Set app:showAsAction to ifRoom to display the menu item in the ActionBar if there is room
+    // COMPLETED (2) Create a menu resource in res/menu/ called main.xml
+    // COMPLETED (3) Add one item to the menu with an ID of action_refresh
+    // COMPLETED (4) Set the title of the menu item to "Refresh" using strings.xml
+    // COMPLETED (5) Set the orderInCategory value to 1 to make sure this item is the first in the list
+    // COMPLETED (6) Set app:showAsAction to ifRoom to display the menu item in the ActionBar if there is room
 
 
-    // TODO (7) Override onCreateOptionsMenu
-    // TODO (8) Use getMenuInflater().inflate to inflate the menu
-    // TODO (9) Return true to display this menu
+    // COMPLETED (7) Override onCreateOptionsMenu
+    // COMPLETED (8) Use getMenuInflater().inflate to inflate the menu
+    // COMPLETED (9) Return true to display this menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-    // TODO (10) Override onOptionsItemSelected
-    // TODO (11) Within this method, get the ID from the MenuItem
-    // TODO (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
-    // TODO (13) For now, for all other IDs, return super.onOptionsItemSelected
+    // COMPLETED (10) Override onOptionsItemSelected
+    // COMPLETED (11) Within this method, get the ID from the MenuItem
+    // COMPLETED (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
+    // COMPLETED (13) For now, for all other IDs, return super.onOptionsItemSelected
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.string.reset:
+                mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
+                mNumbersList.setAdapter(mAdapter);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
