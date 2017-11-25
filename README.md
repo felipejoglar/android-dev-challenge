@@ -30,6 +30,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 * [Lesson 1 - Introduction](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-01-welcome.md)
 * [Lesson 2 - Project Sunshine](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-02-project-sunshine.md)
 * [Lesson 3 - Connect to the Internet](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-03-connect-to-the-internet.md)
+* [Lesson 4 - RecyclerView](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-04-recyclerview.md)
 
 
 ## License
