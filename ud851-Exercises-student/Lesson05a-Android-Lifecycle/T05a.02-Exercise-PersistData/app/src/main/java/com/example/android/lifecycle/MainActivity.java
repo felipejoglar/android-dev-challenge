@@ -1,6 +1,7 @@
 package com.example.android.lifecycle;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    // TODO (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
+    // COMPLETED (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
+    private static final String LIFECYCLE_CALLBACKS_TEXT_KEY = "callbacks";
 
     /* Constant values for the names of each respective lifecycle callback */
     private static final String ON_CREATE = "onCreate";
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the activity is first created. This is where you should do all of your normal
      * static set up: create views, bind data to lists, etc.
-     *
+     * <p>
      * Always followed by onStart().
      *
      * @param savedInstanceState The Activity's previously frozen state, if there was one.
@@ -49,14 +51,20 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // TODO (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
+        // COMPLETED (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey(LIFECYCLE_CALLBACKS_TEXT_KEY)) {
+                String allSavedText = savedInstanceState.getString(LIFECYCLE_CALLBACKS_TEXT_KEY);
+                mLifecycleDisplay.setText(allSavedText);
+            }
+        }
 
         logAndAppend(ON_CREATE);
     }
 
     /**
      * Called when the activity is becoming visible to the user.
-     *
+     * <p>
      * Followed by onResume() if the activity comes to the foreground, or onStop() if it becomes
      * hidden.
      */
@@ -70,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the activity will start interacting with the user. At this point your activity
      * is at the top of the activity stack, with user input going to it.
-     *
+     * <p>
      * Always followed by onPause().
      */
     @Override
@@ -85,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
      * used to commit unsaved changes to persistent data, stop animations and other things that may
      * be consuming CPU, etc. Implementations of this method must be very quick because the next
      * activity will not be resumed until this method returns.
-     *
+     * <p>
      * Followed by either onResume() if the activity returns back to the front, or onStop() if it
      * becomes invisible to the user.
      */
@@ -101,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
      * resumed and is covering this one. This may happen either because a new activity is being
      * started, an existing one is being brought in front of this one, or this one is being
      * destroyed.
-     *
+     * <p>
      * Followed by either onRestart() if this activity is coming back to interact with the user, or
      * onDestroy() if this activity is going away.
      */
@@ -114,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Called after your activity has been stopped, prior to it being started again.
-     *
+     * <p>
      * Always followed by onStart()
      */
     @Override
@@ -123,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
         logAndAppend(ON_RESTART);
     }
-    
+
     /**
      * The final call you receive before your activity is destroyed. This can happen either because
      * the activity is finishing (someone called finish() on it, or because the system is
@@ -137,11 +145,20 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_DESTROY);
     }
 
-    // TODO (2) Override onSaveInstanceState
-    // Do steps 3 - 5 within onSaveInstanceState
-    // TODO (3) Call super.onSaveInstanceState
-    // TODO (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
-    // TODO (5) Put the text from the TextView in the outState bundle
+    // COMPLETED (2) Override onSaveInstanceState
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        // Do steps 3 - 5 within onSaveInstanceState
+        // COMPLETED (3) Call super.onSaveInstanceState
+        super.onSaveInstanceState(outState);
+        // COMPLETED (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
+        logAndAppend(ON_SAVE_INSTANCE_STATE);
+        // COMPLETED (5) Put the text from the TextView in the outState bundle
+        String textToSave = mLifecycleDisplay.getText().toString();
+        outState.putString(LIFECYCLE_CALLBACKS_TEXT_KEY, textToSave);
+    }
+
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can
