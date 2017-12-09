@@ -32,6 +32,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 * [Lesson 3 - Connect to the Internet](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-03-connect-to-the-internet.md)
 * [Lesson 4 - RecyclerView](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-04-recyclerview.md)
 * [Lesson 5 - Intents](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-05-intents.md)
+* [Lesson 6 - Lifecycle](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-06-lifecycle.md)
 
 
 ## License
