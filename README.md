@@ -13,15 +13,15 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 
 ## Languages, libraries and tools used
 
-* [Java](https://docs.oracle.com/javase/8/)
+* [Java](https://docs.oracle.com/javase/7/docs/)
 * Android Support Libraries
 
 
 ## Requirements
 
-* JDK 1.8
+* [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
 * [Android SDK](https://developer.android.com/studio/index.html)
-* Android O ([API 26](https://developer.android.com/preview/api-overview.html))
+* Android Nougat ([API 25](https://developer.android.com/about/versions/nougat/android-7.1.html))
 * Latest Android SDK tools and build tools.
 
 
