@@ -13,7 +13,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 
 ## Languages, libraries and tools used
 
-* [Java](https://docs.oracle.com/javase/8/)
+* [Java](https://docs.oracle.com/javase/7/docs/)
 * Android Support Libraries
 
 
