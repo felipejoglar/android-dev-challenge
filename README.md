@@ -35,6 +35,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 * [Lesson 6 - Lifecycle](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-06-lifecycle.md)
 * [Lesson 7 - Preferences](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-07-preferences.md)
 * [Lesson 8 - Storing data in SQLite](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-08-storing-data-in-sqlite.md)
+* [Lesson 9 - Content Providers](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-09-content-provider.md)
 
 
 ## License
