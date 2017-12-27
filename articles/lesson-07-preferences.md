@@ -442,8 +442,9 @@ Giving the users a few key options is good, but overwhelm them with screens, upo
 
 To help us with the decision of whether or not to make something a setting, there is a handy flowchart to look at.
 
-![Settings Flowchart](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/setting-flowchart.png)
-
+<p align="center">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/setting-flowchart.png" alt="Settings Flowchart" style="width: 10px;"/>
+</p>
 
 ## Creating resources
 
