@@ -24,7 +24,9 @@ Within the lifecycle callback methods, we can declare how our activity behaves w
 
 Activities in the system are managed as an *activity stack*. When a new activity is started, it is placed on the top of the stack and becomes the running activity -- the previous activity always remains below it in the stack, and will not come to the foreground again until the new activity exits.
 
-![Activity Basic Lifecycle](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-basic-lifecycle.png)
+<p align="center">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-basic-lifecycle.png" alt="Activity Basic Lifecycle" style="width: 10px;"/>
+</p>
 
 An activity has essentially four states:
 
@@ -41,7 +43,9 @@ There are three key loops we may be interested in monitoring within our activity
 - The **visible lifetime** of an activity happens between a call to `onStart()` until a corresponding call to `onStop()`. During this time the user can see the activity on-screen, though it may not be in the foreground and interacting with the user. Between these two methods we can maintain resources that are needed to show the activity to the user. The `onStart()` and `onStop()` methods can be called multiple times, as the activity becomes visible and hidden to the user.
 - The **foreground lifetime** of an activity happens between a call to `onResume()` until a corresponding call to `onPause()`. During this time the activity is in front of all other activities and interacting with the user. An activity can frequently go between the resumed and paused states -- for example when the device goes to sleep, when an activity result is delivered, when a new intent is delivered -- so the code in these methods should be fairly lightweight.
 
-![Activity Lifecycle](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-lifecycle.png)
+<p align="center">
+<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-lifecycle.png" alt="Activity Lifecycle" style="width: 10px;"/>
+</p>
 
 In general the movement through an activity's lifecycle looks like this:
 
