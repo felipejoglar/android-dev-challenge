@@ -489,6 +489,7 @@ public class TaskContentProvider extends ContentProvider {
 [`ContentProvider` reference](https://developer.android.com/reference/android/content/ContentProvider.html)<br>
 [`UriMatcher` reference](https://developer.android.com/reference/android/content/UriMatcher.html)<br>
 [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)<br>
+[Steps for creating a Content Provider](https://medium.com/@paulnunezm/steps-for-creating-a-content-provider-ab376d661613) by Paul Núñez
 
 
 ###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)
