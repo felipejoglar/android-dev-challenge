@@ -38,6 +38,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 * [Lesson 9 - Content Providers](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-09-content-provider.md)
 * [Lesson 10 - Building a Content Provider](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-10-building-a-content-provider.md)
 * [Lesson 11 - Background Tasks](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-11-background-tasks.md)
+* [Lesson 12 - Completing the UI](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-12-completing-the-ui.md)
 
 
 ## License
