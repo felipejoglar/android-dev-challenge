@@ -7,6 +7,7 @@
 
 - [Views and View Groups](#views-and-view-groups)
 - [Constraint Layout](#constraint-layout)
+- [Vector Images](#vector-images)
 - [Hierarchy Viewer](#hierarchy-viewer)
 - [Data Binding](#data-binding)
 - [Accessibility](#accessibility)
