@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- COMPLETED (3) Create the version of activity_detail that will be used in landscape mode -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/primary_info"
+            layout="@layout/primary_weather_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".55"/>
+
+        <include
+            android:id="@+id/extra_details"
+            layout="@layout/extra_weather_details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".45"/>
+
+    </LinearLayout>
+</layout>
