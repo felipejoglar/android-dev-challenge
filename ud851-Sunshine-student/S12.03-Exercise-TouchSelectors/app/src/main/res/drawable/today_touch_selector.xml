@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- COMPLETED (3) Create a touch selector called today_touch_selector for the today list item layout -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/colorPrimaryDark" android:state_pressed="true" />
+
+    <item android:drawable="@color/colorPrimaryDark" android:state_activated="true" />
+
+    <item android:drawable="@color/colorPrimaryDark" android:state_selected="true" />
+
+    <item android:drawable="@color/colorPrimary" />
+</selector>
