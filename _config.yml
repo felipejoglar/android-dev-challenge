@@ -1,0 +1,20 @@
+# Site settings
+title: Google Android Developer Challenge 2017
+email: your-email@domain.com
+description: >
+  Google Android Developer Challenge Schoolarship by Udacity 2017-2018
+baseurl: "/android-dev-challenge"
+url: "https://fjoglar.github.io"
+
+# Build settings
+markdown: kramdown
+
+collections:
+  - changes
+
+plugins:
+  - octopress-autoprefixer
+  - jekyll-redirect-from
+
+exclude:
+  - vendor
