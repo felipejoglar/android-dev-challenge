@@ -40,6 +40,7 @@ It also contains a [serie of articles](https://github.com/fjoglar/android-dev-ch
 * [Lesson 11 - Background Tasks](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-11-background-tasks.md)
 * [Lesson 12 - Completing the UI](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-12-completing-the-ui.md)
 * [Lesson 13 - Polishing the UI](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-13-polishing-the-ui.md)
+* [Lesson 14 - Challenge Course Wrap Up](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-14-challenge-course-wrap-up.md)
 
 
 ## License
