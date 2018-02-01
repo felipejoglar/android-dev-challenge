@@ -10,7 +10,7 @@ url: "https://fjoglar.github.io"
 markdown: kramdown
 
 collections:
-  - changes
+  - articles
 
 plugins:
   - octopress-autoprefixer
