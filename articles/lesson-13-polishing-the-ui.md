@@ -7,8 +7,8 @@
 
 - [Android Design Principles](#android-design-principles)
 - [Visual mocks and keylines](#visual-mocks-and-keylines)
-- [Color & Fonts guidelines](#color-&-fonts-guidelines)
-- [Styles & Themes](#styles-&-themes)
+- [Color & Fonts guidelines](#color--fonts-guidelines)
+- [Styles & Themes](#styles--themes)
 - [Designing for multiple screens](#designing-for-multiple-screens)
 
 
