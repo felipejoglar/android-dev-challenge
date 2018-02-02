@@ -6,6 +6,8 @@
 
 Source for the [Google Android Developer Challenge 2017][1] website.
 
+This website and theme are inspired by the [Android Kotlin Guides][2] [website][3].
+
 
 ## License
 
@@ -27,3 +29,5 @@ limitations under the License.
 
 
 [1]: https://fjoglar.github.io/android-dev-challenge/
+[2]: https://github.com/android/kotlin-guides
+[3]: https://android.github.io/kotlin-guides/
