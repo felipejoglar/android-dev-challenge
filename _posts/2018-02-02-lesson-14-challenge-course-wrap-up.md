@@ -1,12 +1,14 @@
 ---
-layout: page
+layout: post
 title: Lesson 14 - Challenge Course Wrap Up
 cover: lesson-14-banner.png
+author: Felipe Joglar
+permalink: /lessons/14
+summary: "The Android SDK is a wide and complex framework and after these three months we have just scratched the surface, so what we can we do from here?"
 ---
 
-# Lesson 14 - Challenge Course Wrap Up
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 14 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-14-banner.png)
 
 
 ## :tada::tada: Hooray!! :tada::tada:
@@ -32,5 +34,3 @@ Lots of stuff!! :sweat_smile:
 Personally I have learned a lot through this course and making all these articles/summaries for each lesson that I will keep as reference for future times and avoid as much as possible this [(ノಠ益ಠ)ノ彡┻━┻](http://knowyourmeme.com/memes/flipping-tables) moments. I would also like to please all the fellow students for their support and hope this serie of articles can help them as much as myself. And of course thanks to Udacity and Google for this opportunity.
 
 So this is all by now. Hope see you on the second phase where we could enjoy the [Android Developer Nanodegree](https://eu.udacity.com/course/android-developer-nanodegree-by-google--nd801).
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

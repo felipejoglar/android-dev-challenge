@@ -225,8 +225,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jemoji
   octopress-autoprefixer
   therubyracer
 
 BUNDLED WITH
-   1.15.4
+   1.16.1

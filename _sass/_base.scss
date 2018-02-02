@@ -55,6 +55,11 @@ h5, h6 {
   line-height: 24px;
   margin: 8px 0;
 }
+p, li{
+      font-size: $font-size;
+}
+
+
 /**
  * Images
  */
@@ -216,6 +221,22 @@ pre {
     }
 }
 
+/**
+ * Card description text
+ */
+.description {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 37px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media screen and (max-width: $layout-large-screen) {
 

@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 13 - Polishing the UI
 cover: lesson-13-banner.png
+author: Felipe Joglar
+permalink: /lessons/13
+summary: "In this lesson we'll give final touches to the UI, reviewing the Android Design Principles, play with fonts & colors, and how to keep the design consistent across the app and organized via styles and themes. Finally we will learn how to make UIs for different devices and screen sizes."
 ---
 
-# Lesson 13 - Polishing the UI
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 13 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-13-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -54,7 +56,7 @@ Colors are a big part of app design, from branding to visual consistency. If we 
 
 For these reasons, Android material design guidelines recommend having a *primary color* and an *accent color*. The primary color is the main color base for our app, Views and components like the menu bar will generally include this color. And the accent color is typically brighter, and serves to draw attention to key elements like buttons in an app. It's common to chose three slightly different shades of the primary color to use and one accent color.
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/style-typography-roboto.png" alt="Roboto Typography" width="400" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/style-typography-roboto.png" alt="Roboto Typography" width="400" align="right" hspace="10">
 
 Another useful way to add consistency and distinguish different views in our app is through text and its different font and sizes. The default text for Android is a font called *Roboto*, which is designed to work across a range of differently sized platforms. It comes in a variety of font families, *font-families* are groups of fonts that share similar design characteristics, like serif or sans serif.
 
@@ -233,7 +235,7 @@ But being compatible with different device types is not enough. Each screen size
 **Screen density**. The quantity of pixels within a physical area of the screen; usually referred to as dpi (dots per inch). For example, a "low" density screen has fewer pixels within a given physical area, compared to a "normal" or "high" density screen. For simplicity, Android groups all actual screen densities into six generalized densities: low, medium, high, extra-high, extra-extra-high, and extra-extra-extra-high.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/density-buckets.png" alt="Density Buckets" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/density-buckets.png" alt="Density Buckets"/>
 </p>
 
 One common pitfall we must avoid when designing our layouts is using absolute pixels to define distances or sizes. Defining layout dimensions with pixels is a problem because different screens have different pixel densities, so the same number of pixels may correspond to different physical sizes on different devices. Therefore, when specifying dimensions, always use either *dp* or *sp* units. A dp is a *density-independent pixel* that corresponds to the physical size of a pixel at 160 dpi. An sp is the same base unit, but is scaled by the user's preferred text size (it’s a scale-independent pixel), so we should use this measurement unit when defining text size (but never for layout sizes).
@@ -297,6 +299,3 @@ This is an alternative to the generalized screen size qualifiers (small, normal,
 [Theme vs Style](https://chris.banes.me/2014/11/12/theme-vs-style/) by Chris Banes<br>
 [Designing for Multiple Screens Training](https://developer.android.com/training/multiscreen/index.html)<br>
 [Supporting Multiple Screens API Guide](https://developer.android.com/guide/practices/screens_support.html)
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

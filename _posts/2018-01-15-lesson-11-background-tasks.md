@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 11 - Background Tasks
 cover: lesson-11-banner.png
+author: Felipe Joglar
+permalink: /lessons/11
+summary: "In this lesson we'll learn about how to effectively run jobs in the background, create notifications and periodically schedule long running background processes."
 ---
 
-# Lesson 11 - Background Tasks
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 11 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-11-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -18,7 +20,7 @@ cover: lesson-11-banner.png
 - [Service Lifecycle](#service-lifecycle)
 - [Notifications](#notifications)
   - [Android O Notification Channels](#android-o-notification-channels)
-  - [Creating Notifications & Pending Intents](#creating-notifications-&-pending-intents)
+  - [Creating Notifications & Pending Intents](#creating-notifications--pending-intents)
   - [Add Actions](#add-actions)
 - [Foreground Services](#foreground-services)
 - [Job Scheduler](#job-scheduler)
@@ -229,7 +231,7 @@ public class ExampleService extends Service {
 If the service is started, the active lifetime ends at the same time that the entire lifetime ends (the service is still active even after `onStartCommand()` returns). If the service is bound, the active lifetime ends when `onUnbind()` returns.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/service_lifecycle.png" alt="Service Lifecycle" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/service_lifecycle.png" alt="Service Lifecycle"/>
 </p>
 
 
@@ -419,7 +421,7 @@ So now that we understand how services work, let's review how Android determines
 when it kills off applications. *App priority* is divided into four general buckets, critical, high, medium, and low. Within each bucket the apps are prioritized in a queue with the app that's been at the lowest priority for the longest the first in line to be executed.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android_priority_piramid.png" alt="Android Priority Piramid" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/android_priority_piramid.png" alt="Android Priority Piramid"/>
 </p>
 
 The three laws of Android Resource Management:
@@ -443,11 +445,11 @@ We use `JobScheduler` by registering jobs, specifying their requirements for net
 Firebase JobDispatcher is an open-source library that provides an API similar to `JobScheduler` in the Android platform. Firebase JobDispatcher serves as a `JobScheduler`-compatibility layer for apps targeting versions of Android lower than 5.0 (API level 21).
 
 | Library	| Minimum API	| Requires Google Play	| Service API	| Custom retry strategies
-|---------|---------|---------|---------|---------|
+|---------|:---------:|:---------:|---------|:---------:|
 | Framework JobScheduler	| 21	| No	| JobScheduler |	Yes
 | Firebase JobDispatcher	| 9	| Yes	| JobScheduler |	Yes
 
-To use Firebase JobDispatcher we should follow these steps:
+<br>To use Firebase JobDispatcher we should follow these steps:
 
 1. Add the Gradle dependency. Add the following to our `build.gradle`'s dependencies section:
 
@@ -694,6 +696,3 @@ public class MainActivity extends AppCompatActivity {
 [Local Broadcast, less overhead and secure in Android](https://android.jlelse.eu/local-broadcast-less-overhead-and-secure-in-android-cfa343bb05be)<br>
 [How to handle background services in ANDROID O?](https://medium.com/@kevalpatel2106/how-to-handle-background-services-in-android-o-f96783e65268) by Keval Patel<br>
 [Deep Dive into Android Services](https://proandroiddev.com/deep-dive-into-android-services-4830b8c9a09) by Nazmul Idris<br>
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

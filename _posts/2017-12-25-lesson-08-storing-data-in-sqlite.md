@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 8 - Storing data in SQLite
 cover: lesson-8-banner.png
+author: Felipe Joglar
+permalink: /lessons/08
+summary: "In this lesson we'll start our exploration into data persistence on Android by implementing a SQLite database."
 ---
 
-# Lesson 8 - Storing data in SQLite
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 8 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-8-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -296,7 +298,9 @@ To run our local unit tests, use these steps:
 
 The project builds, if necessary, and the testing view appears at the bottom of the screen. If all the tests we ran are successful, the progress bar at the top of the view turns green. A status message in the footer also reports "Tests Passed."
 
-![Run test view](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/run-test-ok.png)
+<p align="center">
+    <img src="{{site.baseurl}}/assets/images/run-test-ok.png" alt="Run test view"/>
+</p>
 
 
 ### References
@@ -312,5 +316,3 @@ The project builds, if necessary, and the testing view appears at the bottom of 
 [Android Testing Guide](https://ravidsrk.github.io/android-testing-guide/)<br>
 [Android Developer Fundamentals Course - 3.2: Testing your App](https://google-developer-training.gitbooks.io/android-developer-fundamentals-course-concepts/content/en/Unit%201/32_c_testing_your_app.html)<br>
 [Android Testing Codelab - Google Developers](http://bit.ly/23IfqMx)<br>
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

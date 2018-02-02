@@ -1,14 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 2 - Project Sunshine
 cover: lesson-2-banner.png
+author: Felipe Joglar
+permalink: /lessons/02
+summary: "In this lesson, we'll learn how to create and run our first simple Android app. In doing so, we'll explore how to create simple layouts for Android, how Android runs on the phone and the IDE Android Studio."
 ---
 
-# Lesson 2 - Project Sunshine
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 2 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-2-banner.png)
-
-In this first lesson we are introduced to the Android development enviroment and we start playing with Android Studio creating new projects, we are also introduced to how actually Android works and we start designing our firsts activities. Lets go!
+{{page.summary}}
 
 ## Index
 
@@ -25,7 +26,7 @@ In this first lesson we are introduced to the Android development enviroment and
 
 ## Installing Android Studio
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-studio-logo.png" width="200" align="left" hspace="10">
+<img src="{{site.baseurl}}/assets/images/android-studio-logo.png" alt="Android Studio" width="100" align="left" hspace="10">
 
 The first part when we are beginning in the Android world is preparing our development enviroment.
 
@@ -33,14 +34,10 @@ For us, Android developers, it starts by downloading and installing the JDK (Jav
 
 After installing both tools is a good practice to setup your environment variables `JAVA_HOME` and `ANDROID_HOME`, so we can build from command line when needed. 
 
-- ### References
-[Preparing your Android Environment for development](https://medium.com/@rafael_toledo/preparing-your-android-environment-for-development-android-tutorials-pt-1-5f76ca2b8a32) by Rafael Toledo.<br>
-[Creating a new project and an emulator on Android Studio](https://medium.com/@rafael_toledo/creating-a-new-project-and-an-emulator-on-android-studio-android-tutorials-2-35bd965ac42b) by Rafael Toledo.
-
 
 ## Introduction to git and Github
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/git-github-logo.png" width="350" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/git-github-logo.png" alt="Git and GitHub" width="350" align="right" hspace="10">
 
 Git and GitHub are two powerfull tools for us developers, knowing how to use this is a really good point to grow fast, experiment, and keep track of all of our work.
 
@@ -49,14 +46,6 @@ Git is a *Version Control System* (VCS) that lots of developers use to collabora
 Github is a *platform* created to host projects which use git as their versioning control system. It has some nice features for code reviewing and contributing. This platform is full of Open Source projects of all kind of technologies. Of course there are lots of good libraries and projects for Android Developers like us.
 
 There are many resources to learn about these tools, there is also a beginner level Udacity course centered in [how to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775).
-
-- ### References
-[Download Git](https://git-scm.com/downloads)<br>
-[Getting Started - Git Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)<br>
-[git - the simple guide](http://rogerdudler.github.io/git-guide/)<br>
-[Atlassian Git Tutorial](https://www.atlassian.com/git)<br>
-[GitHub Hello World guide](https://guides.github.com/activities/hello-world/)<br>
-[GitHub for desktop](https://desktop.github.com/)
 
 
 ## Android min and target Versions
@@ -69,12 +58,12 @@ The `targetSdkVersion` is an integer designating the *API Level that the applica
 This attribute informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to `minSdkVersion`). <br>
 To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
 
-- ### References
-[Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd) by Ian Lake.
 
 ## Android Software Stack
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/android-software-stack.png" width="325" align="right" hspace="10">
+<a href="{{site.baseurl}}/assets/images/android-software-stack.png">
+<img src="{{site.baseurl}}/assets/images/android-software-stack.png" alt="Android Software Stack" width="325" align="right" hspace="10">
+</a>
 
 Many of us have always listened that Android is an Operating System (OS), but the reality is that Android is what is called a Software Stack.
 
@@ -82,11 +71,7 @@ What does that mean? According to this [StackOverflow thread](https://stackoverf
 
 So Android is a Software Stack that runs on top of the Linux kernel.
 
-> Android is an open source, Linux-based software stack created for a wide array of devices and form factors. The following diagram shows the major components of the Android platform. <br><br>
-> &mdash; Android Official Documentation
-
-- ### References
-[Android Platform Architecture](https://developer.android.com/guide/platform/index.html)
+> Android is an open source, Linux-based software stack created for a wide array of devices and form factors. The following diagram shows the major components of the Android platform.<br><br>&mdash; Android Official Documentation
 
 
 ## Activities
@@ -121,10 +106,6 @@ There are four different types of app components. Each type serves a distinct pu
 - `onCreate(Bundle)` is where we *initialize* our activity. Most importantly, here we will usually call `setContentView(int)` with a layout resource defining our UI, and using `findViewById(int)` to retrieve the widgets in that UI that we need to interact with programmatically.
 - `onPause()` is where we deal with the user *leaving* our activity.
 
-- ### References
-[Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html)<br>
-[Activities](https://developer.android.com/guide/components/activities/index.html)<br>
-[Activity Reference](https://developer.android.com/reference/android/app/Activity.html)
 
 ## Layouts
 
@@ -136,7 +117,7 @@ These XML layout files provides the system with detailed information about what 
 
 An example of XML layout:
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/xml-layout-example.png" width="250" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/xml-layout-example.png" alt="XML Layout example" width="250" align="right" hspace="10">
 
 ``` xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -200,7 +181,20 @@ So what are those R.layout or R.id things, and what is setContentView actually d
 
 To finish we must keep in mind that designing User Interfaces is not a trivial task. We need to make it look beautiful, accesible, with multiple screen availability, responsive, etc. There is a full extensive guideline of [Material Design](https://material.io/guidelines/) that help designers and developers go through it.
 
-- ### References
+### References
+[Preparing your Android Environment for development](https://medium.com/@rafael_toledo/preparing-your-android-environment-for-development-android-tutorials-pt-1-5f76ca2b8a32) by Rafael Toledo.<br>
+[Creating a new project and an emulator on Android Studio](https://medium.com/@rafael_toledo/creating-a-new-project-and-an-emulator-on-android-studio-android-tutorials-2-35bd965ac42b) by Rafael Toledo.<br>
+[Download Git](https://git-scm.com/downloads)<br>
+[Getting Started - Git Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)<br>
+[git - the simple guide](http://rogerdudler.github.io/git-guide/)<br>
+[Atlassian Git Tutorial](https://www.atlassian.com/git)<br>
+[GitHub Hello World guide](https://guides.github.com/activities/hello-world/)<br>
+[GitHub for desktop](https://desktop.github.com/)<br>
+[Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd) by Ian Lake.<br>
+[Android Platform Architecture](https://developer.android.com/guide/platform/index.html)<br>
+[Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html)<br>
+[Activities](https://developer.android.com/guide/components/activities/index.html)<br>
+[Activity Reference](https://developer.android.com/reference/android/app/Activity.html)<br>
 [Android Training - Build a Simple User Interface](https://developer.android.com/training/basics/firstapp/building-ui.html)<br>
 [Udacity Android Visualizer](http://labs.udacity.com/android-visualizer/)<br>
 [Common Android Views Cheat Sheet](https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view)<br>
@@ -208,5 +202,3 @@ To finish we must keep in mind that designing User Interfaces is not a trivial t
 [Building a Responsive UI in Android](https://medium.com/google-developers/building-a-responsive-ui-in-android-7dc7e4efcbb3) by Ian Lake<br>
 [Build a Responsive UI with ConstraintLayout](https://developer.android.com/training/constraint-layout/index.html)<br>
 Udacitity's [Android Basics: User Interface by Google](https://www.udacity.com/course/android-basics-user-interface--ud834) course
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

@@ -1,24 +1,26 @@
 ---
-layout: page
+layout: post
 title: Lesson 5 - Intents
 cover: lesson-5-banner.png
+author: Felipe Joglar
+permalink: /lessons/05
+summary: "This lesson is all about making multi-screen apps using Intents. We'll learn how to use explicit intents to open up different app screens. We'll also learn about implicit intents, which are a powerful part of the Android framework that allows us to send and receive data from other apps, such as Google maps, Chrome and a host of social media apps."
 ---
 
-# Lesson 5 - Intents
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 5 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-5-banner.png)
-
+{{page.summary}}
 
 ## Index
 
 - [Intents](#intents)
-  - [Intent types](#intent-types)
-  - [Building an intent](#building-an-intent)
-  - [Explicit intent](#explicit-intent)
-  - [Passing data through intents](#passing-data-through-intents)
-  - [Implicit intent](#implicit-intent)
-  - [Understanding URIs](#understanding-uris)
-  - [Media Types](#media-types)
+- [Intent types](#intent-types)
+- [Building an intent](#building-an-intent)
+- [Explicit intent](#explicit-intent)
+- [Passing data through intents](#passing-data-through-intents)
+- [Implicit intent](#implicit-intent)
+- [Understanding URIs](#understanding-uris)
+- [Media Types](#media-types)
 
 
 ## Intents
@@ -38,7 +40,7 @@ We can start a service to perform a one-time operation by passing an `Intent` to
 + **Delivering a broadcast**. A broadcast is a message that any app can receive. The system delivers various broadcasts for system events, such as when the system boots up or the device starts charging. We can deliver a broadcast to other apps by passing an `Intent` to `sendBroadcast()` or `sendOrderedBroadcast()`.
 
 
-### Intent types
+## Intent types
 
 There are two types of intents:
 
@@ -46,7 +48,7 @@ There are two types of intents:
 + **Implicit intents** do not name a specific component, but instead declare a general action to perform, which allows a component from another app to handle it. For example, if we want to show the user a location on a map, we can use an implicit intent to request that another capable app show a specified location on a map.
 
 
-### Building an intent
+## Building an intent
 
 An `Intent` object carries information that the Android system uses to determine which component to start, plus information that the recipient component uses in order to properly perform the action (such as the action to take and the data to act upon).
 
@@ -77,7 +79,7 @@ Key-value pairs that carry additional information required to accomplish the req
 Flags are defined in the `Intent` class as metadata for the intent. The flags may instruct the Android system how to launch an activity (for example, which task the activity should belong to) and how to treat it after it's launched (for example, whether it belongs in the list of recent activities).
 
 
-### Explicit intent
+## Explicit intent
 
 Explicit intents explicitly define the component which should be called by the Android system, by using the Java class as identifier, they are typically used within an application as the classes in an application are controlled by the application developer. 
 
@@ -90,7 +92,7 @@ startActivity(startActivityTwoIntent);
 The `Intent(Context, Class)` constructor supplies the app `Context` and the component a `Class` object. As such, this intent explicitly starts the `ActivityTwo` class in the app.
 
 
-### Passing data through intents
+## Passing data through intents
 
 Optionally an intent can also contain additional data based on an instance of the `Bundle` class which can be retrieved from the intent via the `getExtras()` method.
 
@@ -167,9 +169,9 @@ public class ChildActivity extends AppCompatActivity {
 ```
 
 
-### Implicit intent
+## Implicit intent
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/intent.png" width="400" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/intent.png" width="400" align="right" hspace="10">
 
 Implicit intents specify the action which should be performed and optionally data which provides content for the action. When we create an implicit intent, the Android system finds the appropriate component to start by comparing the contents of the intent to the *intent filters* declared in the manifest file of other apps on the device. If the intent matches an intent filter, the system starts that component and delivers it the Intent object. If multiple intent filters are compatible, the system displays a dialog so the user can pick which app to use.
 
@@ -227,7 +229,7 @@ private void shareText (String text) {
  ```
 
 
-### Understanding URIs
+## Understanding URIs
 
 A Uniform Resource Identifier (URI) is a string of characters used to identify a resource.
 
@@ -269,7 +271,7 @@ scheme              path
 ```
 
 
-### Media Types
+## Media Types
 
 A media type (also **MIME** -Multipurpose Internet Mail Extensions- type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 
@@ -300,7 +302,3 @@ Common examples:
 [`Intent` reference](https://developer.android.com/reference/android/content/Intent.html)<br>
 [`ShareCompat` reference](https://developer.android.com/reference/android/support/v4/app/ShareCompat.html)<br>
 [Android Intents - Tutorial](http://www.vogella.com/tutorials/AndroidIntent/article.html) by Vogella
-
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

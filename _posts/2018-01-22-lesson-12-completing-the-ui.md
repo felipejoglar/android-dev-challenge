@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 12 - Completing the UI
 cover: lesson-12-banner.png
+author: Felipe Joglar
+permalink: /lessons/12
+summary: "This lesson is all about building a user interface that is well-organized and accessible. We’ll be building a sample app where we’ll learn about different styles of layouts, views and view groups, as well as data binding, and accessibility."
 ---
 
-# Lesson 12 - Completing the UI
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 12 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-12-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -93,7 +95,7 @@ compile 'com.android.support.constraint:constraint-layout:1.0.2'
 ```
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/constraint-layout.png" alt="ConstraintLayout Example" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/constraint-layout.png" alt="ConstraintLayout Example"/>
 </p>
 
 
@@ -143,7 +145,7 @@ To use the hierarchy viewer tool we must follow the next steps:
 4. Double-click our app's package name in the **Windows** tab on the left. This populates the panes with the view hierarchy of our app.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/hierarchy-viewer.png" alt="Hierarchy Viewer" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/hierarchy-viewer.png" alt="Hierarchy Viewer"/>
 </p>
 
 > **Note**: Hierarchy Viewer is no longer being developed. To inspect the properties in our view hierarchy at runtime, we should instead use [Layout Inspector](https://developer.android.com/studio/debug/layout-inspector.html) in Android Studio. However, Layout Inspector does not currently provide profiling details about our layout performance.
@@ -389,7 +391,7 @@ When we have this kind of layouts, we sometimes need use same portions of UI in 
 ```
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/layout-adaptiveui.png" alt="Responsive UI Pattern" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/layout-adaptiveui.png" alt="Responsive UI Pattern"/>
 </p>
 
 
@@ -412,6 +414,3 @@ When we have this kind of layouts, we sometimes need use same portions of UI in 
 [Localization checklist](https://developer.android.com/distribute/best-practices/launch/localization-checklist.html)<br>
 [Designing for Multiple Screens](https://developer.android.com/training/multiscreen/index.html)<br>
 [Supporting Different Screens](https://developer.android.com/training/basics/supporting-devices/screens.html)
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

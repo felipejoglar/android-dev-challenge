@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 6 - Lifecycle
 cover: lesson-6-banner.png
+author: Felipe Joglar
+permalink: /lessons/06
+summary: "One of the critical parts of Android any good developer needs to understand is the Android Lifecycle. In this lesson we'll learn about how activities are created and destroyed. We'll also learn how to properly persist data between rotations of the device."
 ---
 
-# Lesson 6 - Lifecycle
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 6 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-6-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -31,7 +33,7 @@ Within the lifecycle callback methods, we can declare how our activity behaves w
 Activities in the system are managed as an *activity stack*. When a new activity is started, it is placed on the top of the stack and becomes the running activity -- the previous activity always remains below it in the stack, and will not come to the foreground again until the new activity exits.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-basic-lifecycle.png" alt="Activity Basic Lifecycle" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/activity-basic-lifecycle.png" alt="Activity Basic Lifecycle"/>
 </p>
 
 An activity has essentially four states:
@@ -50,7 +52,7 @@ There are three key loops we may be interested in monitoring within our activity
 - The **foreground lifetime** of an activity happens between a call to `onResume()` until a corresponding call to `onPause()`. During this time the activity is in front of all other activities and interacting with the user. An activity can frequently go between the resumed and paused states -- for example when the device goes to sleep, when an activity result is delivered, when a new intent is delivered -- so the code in these methods should be fairly lightweight.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/activity-lifecycle.png" alt="Activity Lifecycle" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/activity-lifecycle.png" alt="Activity Lifecycle"/>
 </p>
 
 In general the movement through an activity's lifecycle looks like this:
@@ -359,8 +361,8 @@ public class MainActivity extends AppCompatActivity implements
 ### References
 [`Activity` reference](https://developer.android.com/reference/android/app/Activity.html)<br>
 [The Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle.html)<br>
-[The Android Lifecycle cheat sheet — part I: Single Activities](https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-i-single-activities-e49fd3d202ab) by José Alcérreca<br>
-[The Android Lifecycle cheat sheet — part II: Multiple activities](https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-ii-multiple-activities-a411fd139f24) by José Alcérreca<br>
+[The Android Lifecycle cheat sheet — part I: Single Activities](https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-i-single-activities-e49fd3d202ab) by José Alcérreca<br>
+[The Android Lifecycle cheat sheet — part II: Multiple activities](https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-ii-multiple-activities-a411fd139f24) by José Alcérreca<br>
 [Activity Revival and the case of the Rotating Device](https://medium.com/google-developers/activity-revival-and-the-case-of-the-rotating-device-167e34f9a30d) by Joanna Smith<br>
 [Complete Android Fragment & Activity Lifecycle](https://github.com/xxv/android-lifecycle) by Steve Pomeroy<br>
 [Loaders API guide](https://developer.android.com/guide/components/loaders.html#summary)<br>
@@ -370,6 +372,3 @@ public class MainActivity extends AppCompatActivity implements
 [Life Before Loaders](https://www.androiddesignpatterns.com/2012/07/loaders-and-loadermanager-background.html) by Android Design Patterns blog<br>
 [Understanding the LoaderManager](https://www.androiddesignpatterns.com/2012/07/understanding-loadermanager.html) by Android Design Patterns blog<br>
 [Implementing Loaders](https://www.androiddesignpatterns.com/2012/08/implementing-loaders.html) by Android Design Patterns blog
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

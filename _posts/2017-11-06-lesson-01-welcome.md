@@ -1,14 +1,15 @@
 ---
-layout: page
-title: Lesson 1 - Welcome
+layout: post
+title: "Lesson 1 - Welcome"
 cover: lesson-1-banner.png
+author: Felipe Joglar
+permalink: /lessons/01
+summary: "This lesson is just an introductory video to the Challenge program, so in this lesson I will try to explain my situation, motivation and goals towards this course."
 ---
 
-# Lesson 1 - Welcome
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-This lesson is just an introductory video to the Challenge program, in which they motivate us to participate and encourage us to share our thoughts and learnings in Slack as well at the forums in order to be elegible to the [nanodegree program](https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801) that comes after this course. 
-
-![Lesson 1 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-1-banner.png)
+This lesson is just an introductory video to the Challenge program, in which they motivate us to participate and encourage us to share our thoughts and learnings in Slack as well at the forums in order to be elegible to the [nanodegree program](https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801) that comes after this course.
 
 So this is **not a technical article**, instead I will try to explain my situation, motivation and goals towards this course.
 
@@ -25,5 +26,3 @@ Since then I found a full-time job (not Android dev related :disappointed:) and 
 ## Object of this repository
 
 The objective of this [repository](https://github.com/fjoglar/android-dev-challenge) is to *document* my path through the challenge, this will serve as my personal notebook where I will summarize the contents, concepts, learnings and useful resources from the course and related to the stuff we learn.
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

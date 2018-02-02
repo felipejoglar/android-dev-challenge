@@ -1,35 +1,39 @@
 ---
-layout: page
+layout: post
 title: Lesson 4 - RecyclerView
 cover: lesson-4-banner.png
+author: Felipe Joglar
+permalink: /lessons/04
+summary: "Many apps need the ability to display large lists of data. We'll learn how to do this efficiently with Adapters and the RecyclerView class. By the end of this lesson, we'll be efficiently showing off many rows data."
 ---
 
-# Lesson 4 - RecyclerView
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 4 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-4-banner.png)
-
+{{page.summary}}
 
 ## Index
 
 - [RecyclerView](#recyclerview)
-  - [ViewHolder](#viewholder)
-  - [Adapter](#adapter)
-  - [LayoutManager](#layoutmanager)
-  - [Handling click events](#handling-click-events)
-  - [Hooking everything up in the Activity](#hooking-everything-up-in-the-activity)
+- [ViewHolder](#viewholder)
+- [Adapter](#adapter)
+- [LayoutManager](#layoutmanager)
+- [Handling click events](#handling-click-events)
+- [Hooking everything up in the Activity](#hooking-everything-up-in-the-activity)
 
 
 ## RecyclerView
 
 The `RecyclerView` widget is a *more advanced and flexible* version of `ListView` with improved performance and customizability. It was included in API level 22 (Lollipop) in the support-v7 library. This widget is a container for displaying large data sets that can be scrolled very efficiently by maintaining a limited number of views. 
 
-![The RecyclerView widget](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/recyclerview-widget.png)
+<p align="center">
+    <img src="{{site.baseurl}}/assets/images/recyclerview-widget.png" alt="The RecyclerView widget" width="700"/>
+</p>
 
 The `RecyclerView` class simplifies the display and handling of large data sets by providing:
 - Layout managers for positioning items.
 - Default animations for common item operations, such as removal or addition of items.
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/recyclerview-vs-listview.png" width="400" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/recyclerview-vs-listview.png" alt="RecyclerView vs ListView" width="400" align="right" hspace="10">
 
 Under the `RecyclerView` model, several different components work together to display our data. The overall container for our dynamic user interface is a `RecyclerView` object. We add this object to our activity's or fragment's layout; the `RecyclerView`, fills itself with smaller views representing the individual items. The `RecyclerView` uses the *layout manager* we provide to arrange the items. We can use one of the standard layout managers (such as `LinearLayoutManager` or `GridLayoutManager`), or implement our own. 
 
@@ -38,7 +42,7 @@ The individual items are represented by view holder objects. These objects are i
 The view holder objects are managed by an *adapter*, which we create by extending the `RecyclerView.Adapter` abstract class. The adapter creates view holders as needed and binds the view holders to their data. It does this by assigning the view holder to a position, and calling the adapter's `onBindViewHolder()` method. This method uses the view holder's position to determine what the contents should be.
 
 
-  - ### ViewHolder
+## ViewHolder
 
 A ViewHolder describes an item view and metadata about its place within the RecyclerView.
 
@@ -71,7 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 ```
 
 
-  - ### Adapter
+## Adapter
 
 The adapter is the piece that will *connect* our data to our `RecyclerView` and determine the ViewHolder which will need to be used to display that data. It is a good practice to make the adapter as "dumb" as possible. No work performed on the data should live in the adapter. Instead, we must handle all data manipulation outside of our adapter, for example in our data model.
 
@@ -124,7 +128,8 @@ Our Adapter must override 3 methods for it to work:
 
 We now have a fully functioning RecyclerView Adapter ready to do its thing.
 
-  - ### LayoutManager
+
+## LayoutManager
 
 A `LayoutManager` is responsible for measuring and positioning item views within a `RecyclerView` as well as determining the policy for when to recycle item views that are no longer visible to the user. By changing the `LayoutManager` a `RecyclerView` can be used to implement a standard vertically scrolling list, a uniform grid, staggered grids, horizontally scrolling collections and more. Several stock layout managers are provided for general use.
 
@@ -134,7 +139,7 @@ A `LayoutManager` is responsible for measuring and positioning item views within
 
 If none of these layout managers suits our needs, we can create our own by extending the `RecyclerView.LayoutManager` abstract class.
 
-  - ### Handling click events
+## Handling click events
 
 Handling click events on the items of a `RecyclerView` is something we have to do by our own. But it is not difficult and by following a set of steps it can be done easily.
 
@@ -218,7 +223,7 @@ public class MainActivity extends AppCompatActivity
 }
 ```
 
-  - ### Hooking everything up in the Activity
+## Hooking everything up in the Activity
 
 The `Activity` will be the screen that will display our `RecyclerView` and all of its containing data to our users. We need to add one method override for all of this to work, the override `onCreate(Bundle savedInstanceState)`. In the `onCreate` method, we need to add a call to the super method and also add the `setContentView(int layoutResID)` method passing in our Activity’s layout resource id.
 
@@ -309,7 +314,7 @@ And our XML files should be like these:
 ```
 
 
-  - ### References
+### References
 [Recycler View API Guide](https://developer.android.com/guide/topics/ui/layout/recyclerview.html)<br>
 [`RecyclerView` reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html)<br>
 [`RecyclerView.ViewHolder` reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)<br>
@@ -317,6 +322,3 @@ And our XML files should be like these:
 [`RecyclerView.LayoutManager` reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html)<br>
 [Creating Lists and Cards](https://developer.android.com/training/material/lists-cards.html#RecyclerView)<br>
 [Android Fundamentals: Working with the RecyclerView, Adapter, and ViewHolder Pattern](https://willowtreeapps.com/ideas/android-fundamentals-working-with-the-recyclerview-adapter-and-viewholder-pattern/) by WillowTreeApps
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

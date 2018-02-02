@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 7 - Preferences
 cover: lesson-7-banner.png
+author: Felipe Joglar
+permalink: /lessons/07
+summary: "In this lesson, we'll learn how to give users a customized experience by creating Preference screens."
 ---
 
-# Lesson 7 - Preferences
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 7 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-7-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -449,7 +451,7 @@ Giving the users a few key options is good, but overwhelm them with screens, upo
 To help us with the decision of whether or not to make something a setting, there is a handy flowchart to look at.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/setting-flowchart.png" alt="Settings Flowchart" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/setting-flowchart.png" alt="Settings Flowchart"/>
 </p>
 
 ## Creating resources
@@ -557,6 +559,3 @@ The example from above accesing `Boolean`, array and `String` resources:
 [Navigation with Back and Up](https://developer.android.com/design/patterns/navigation.html)<br>
 [Understand Android Activity's launchMode: standard, singleTop, singleTask and singleInstance](https://inthecheesefactory.com/blog/understand-android-activity-launchmode/en) by The Cheese Factory Blog<br>
 Building an Android Settings Screen [Part 1](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-1-5959aa49337c), [Part 2](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-2-2ba63e2d7d1d), [Part 3](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-3-ae9793fd31ec) and [Part 4](https://medium.com/@JakobUlbrich/building-an-android-settings-screen-part-4-9558029827b7) by Jakob Ulbrich
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

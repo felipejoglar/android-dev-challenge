@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 9 - Content Provider
 cover: lesson-9-banner.png
+author: Felipe Joglar
+permalink: /lessons/09
+summary: "This lesson build off the last by introducing Content Providers. Content Providers are a core Android Framework component that help us provide and manage access to our app's data. In this lesson, we'll learn how to leverage a content provider to get data from other apps on the phone."
 ---
 
-# Lesson 9 - Content Provider
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 9 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-9-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -23,7 +25,7 @@ A `ContentProvider` is a component that interacts with a repository. The app doe
 
 Content providers can help an application manage access to data stored by itself, stored by other apps, and provide a way to share data with other apps, they encapsulate the data. Content providers are the standard interface that connects data in one process with code running in another process. Implementing a content provider has many advantages, most importantly we can configure a content provider to allow other applications to securely access and modify our app data.
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/content-provider-overview.png" width="450" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/content-provider-overview.png" alt="COntent Provider overview" width="450" align="right" hspace="10">
 
 We can use content providers if we plan to share data. If we don’t plan to share data, we may still use them because they provide a nice abstraction. This abstraction allows us to make modifications to our application data storage implementation without affecting other existing applications that rely on access to our data. In this scenario only our content provider is affected and not the applications that access it.
 
@@ -93,7 +95,7 @@ Cursor cursor = getContentResolver().query(
 
 Where the `Uri` parameter maps to the table in the provider. The `projection` is an array of columns that should be included for each row retrieved. The `selection` specifies the criteria for selecting rows and the `sortOrder` specifies the order in which rows appear in the returned `Cursor`.
 
-The `ContentResolver.query()` client method always returns a `Cursor` containing the columns specified by the query. A `Cursor` object provides random read access to the rows and columns it contains. Using `Cursor` methods, we can iterate over the rows in the results, determine the data type of each column, get the data out of a column, and examine other properties of the results, as we did in the [Storing data in SQLite](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-08-storing-data-in-sqlite.md#reading-data-from-the-database) lesson.
+The `ContentResolver.query()` client method always returns a `Cursor` containing the columns specified by the query. A `Cursor` object provides random read access to the rows and columns it contains. Using `Cursor` methods, we can iterate over the rows in the results, determine the data type of each column, get the data out of a column, and examine other properties of the results, as we did in the [Storing data in SQLite]({{site.baseurl}}/lessons/08) lesson.
 
 
 ## Content URIs
@@ -136,6 +138,3 @@ We often use id values when we've retrieved a set of rows and then want to updat
 [Content Provider Basics API Guide](https://developer.android.com/guide/topics/providers/content-provider-basics.html)<br>
 [`Manifest.permission` reference](https://developer.android.com/reference/android/Manifest.permission.html)<br>
 [`ContentResolver` reference](https://developer.android.com/reference/android/content/ContentResolver.html)<br>
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

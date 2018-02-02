@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 3 - Connect to the Internet
 cover: lesson-3-banner.png
+author: Felipe Joglar
+permalink: /lessons/03
+summary: "In this lesson we'll harness the power of the Internet by connecting our apps to the cloud! We'll learn how to make requests to an API and visualize what's returned in our Android app, with an emphasis on performance. We'll also explore modifying the Action Bar of our app to add menu items."
 ---
 
-# Lesson 3 - Connect to the Internet
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 3 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-3-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -35,16 +37,14 @@ The Log class allows us to create log messages that appear in logcat. Generally,
 - `Log.d(String, String)` (debug)
 - `Log.v(String, String)` (verbose)
 
-![Android Studio Logcat](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/logcat.png)
-
-- ### References
-[Write and View Logs with Logcat](https://developer.android.com/studio/debug/am-logcat.html)<br>
-[Log reference](https://developer.android.com/reference/android/util/Log.html)
+<p align="center">
+    <img src="{{site.baseurl}}/assets/images/logcat.png" alt="Android Studio Logcat"/>
+</p>
 
 
 ## Toasts
 
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/toast.png" width="300" align="right" hspace="10">
+<img src="{{site.baseurl}}/assets/images/toast.png" alt="Android Toast" width="300" align="right" hspace="10">
 
 A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. Toasts automatically disappear after a timeout.
 
@@ -61,9 +61,6 @@ Toast toast = Toast.makeText(context, text, duration);
 toast.show();
 ```
 
-- ### References
-[Toast API guide](https://developer.android.com/guide/topics/ui/notifiers/toasts.html)<br>
-[Toast reference](https://developer.android.com/reference/android/widget/Toast.html)
 
 ## Resources
 
@@ -108,11 +105,6 @@ In XML, you can access a String by using the @string accessor method. For the sa
 <TextView text=”@string/today />
 ```
 
-- ### References
-[App Resources](https://developer.android.com/guide/topics/resources/index.html)<br>
-[Providing Resources](https://developer.android.com/guide/topics/resources/providing-resources.html)<br>
-[Accessing Resources
-](https://developer.android.com/guide/topics/resources/accessing-resources.html)
 
 ## Menus
 
@@ -159,10 +151,6 @@ public boolean onOptionsItemSelected(MenuItem item) {
 
 When we successfully handle a menu item, return `true`. If you don't handle the menu item, you should call the superclass implementation of `onOptionsItemSelected()` which returns `false`.
 
-- ### References
-[Menus API guide](https://developer.android.com/guide/topics/ui/menus.html)<br>
-[Menu Resource API guide](https://developer.android.com/guide/topics/resources/menu-resource.html)
-
 
 ## Fetching HTTP request
 
@@ -195,12 +183,6 @@ try {
 }
 ```
 
-  - ### References
-[Connecting to the Network](https://developer.android.com/training/basics/network-ops/connecting.html)<br>
-[HttpURLConnection](https://developer.android.com/reference/java/net/HttpURLConnection.html)<br>
-[Networking Security Tips](https://developer.android.com/training/articles/security-tips.html#Networking)<br>
-[`Uri.Builder`](https://developer.android.com/reference/android/net/Uri.Builder.html)
-
 
 ## Permissions
 
@@ -222,14 +204,6 @@ A basic Android app has no permissions associated with it by default, meaning it
 
 Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app.
 
-- ### References
-[System Permissions](https://developer.android.com/guide/topics/permissions/index.html)<br>
-[Requesting Permissions](https://developer.android.com/guide/topics/permissions/requesting.html)<br>
-[Requesting Permissions at Run Time](https://developer.android.com/training/permissions/requesting.html)<br>
-[<uses-permission> API guide](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)<br>
-[App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html)<br>
-[Manifest permission list](https://developer.android.com/reference/android/Manifest.permission.html)
-
 
 ## Threading basics
 
@@ -242,10 +216,6 @@ To keep your application responsive, it *is essential to avoid using the main th
 Network operations and database calls, as well as loading of certain components, are common examples of operations that one should avoid in the main thread. When they are called in the main thread, they are called synchronously, which means that the UI will remain completely unresponsive until the operation completes. For this reason, they are usually performed in separate threads, which thereby avoids blocking the UI while they are being performed.
 
 Android provides many ways of creating and managing threads, and many third-party libraries exist that make thread management a lot more pleasant.
-
-- ### References
-[Processes and Threads](https://developer.android.com/guide/components/processes-and-threads.html)<br>
-[Android Threading: All You Need to Know](https://www.toptal.com/android/android-threading-all-you-need-to-know)
 
 
 ## AsyncTask
@@ -303,9 +273,27 @@ new DownloadFilesTask().execute(url1, url2, url3);
 
 `AsyncTask`, however, falls short if you need your deferred task to run beyond the lifetime of the activity/fragment. It is worth noting that even something as simple as screen rotation can cause the activity to be destroyed.
 
-- ### References
+### References
+[Write and View Logs with Logcat](https://developer.android.com/studio/debug/am-logcat.html)<br>
+[Log reference](https://developer.android.com/reference/android/util/Log.html)<br>
+[Toast API guide](https://developer.android.com/guide/topics/ui/notifiers/toasts.html)<br>
+[Toast reference](https://developer.android.com/reference/android/widget/Toast.html)<br>
+[App Resources](https://developer.android.com/guide/topics/resources/index.html)<br>
+[Providing Resources](https://developer.android.com/guide/topics/resources/providing-resources.html)<br>
+[Accessing Resources](https://developer.android.com/guide/topics/resources/accessing-resources.html)<br>
+[Menus API guide](https://developer.android.com/guide/topics/ui/menus.html)<br>
+[Menu Resource API guide](https://developer.android.com/guide/topics/resources/menu-resource.html)<br>
+[Connecting to the Network](https://developer.android.com/training/basics/network-ops/connecting.html)<br>
+[HttpURLConnection](https://developer.android.com/reference/java/net/HttpURLConnection.html)<br>
+[Networking Security Tips](https://developer.android.com/training/articles/security-tips.html#Networking)<br>
+[`Uri.Builder`](https://developer.android.com/reference/android/net/Uri.Builder.html)<br>
+[System Permissions](https://developer.android.com/guide/topics/permissions/index.html)<br>
+[Requesting Permissions](https://developer.android.com/guide/topics/permissions/requesting.html)<br>
+[Requesting Permissions at Run Time](https://developer.android.com/training/permissions/requesting.html)<br>
+[`<uses-permission>` API guide](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)<br>
+[App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html)<br>
+[Manifest permission list](https://developer.android.com/reference/android/Manifest.permission.html)<br>
+[Processes and Threads](https://developer.android.com/guide/components/processes-and-threads.html)<br>
+[Android Threading: All You Need to Know](https://www.toptal.com/android/android-threading-all-you-need-to-know)<br>
 [Threading Performance](https://developer.android.com/topic/performance/threads.html)<br>
 [`AsyncTask`](https://developer.android.com/reference/android/os/AsyncTask.html)
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)

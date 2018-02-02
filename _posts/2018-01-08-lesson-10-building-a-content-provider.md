@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: post
 title: Lesson 10 - Building a Content Provider
 cover: lesson-10-banner.png
+author: Felipe Joglar
+permalink: /lessons/10
+summary: "In this lesson we'll get to make your own Content Provider! We will follow a step by step guide to create our own Content Provider."
 ---
 
-# Lesson 10 - Building a Content Provider
+<img src="{{site.baseurl}}/assets/banner/{{page.cover}}" alt="{{pagle.title}}"/>
 
-![Lesson 10 Banner](https://github.com/fjoglar/android-dev-challenge/blob/master/assets/lesson-10-banner.png)
-
+{{page.summary}}
 
 ## Index
 
@@ -22,7 +24,7 @@ cover: lesson-10-banner.png
 
 ## Content Provider
 
-As we have seen in the [previous article](https://github.com/fjoglar/android-dev-challenge/blob/master/articles/lesson-09-content-provider.md#lesson-9---content-provider) a content provider manages access to a central repository of data. We implement a provider as one or more classes in an Android application, along with elements in the manifest file. One of our classes implements a subclass `ContentProvider`, which is the interface between our provider and other applications. Although content providers are meant to make data available to other applications, we may of course have activities in our application that allow the user to query and modify the data managed by our provider.
+As we have seen in the [previous article]({{site.baseurl}}/lessons/09) a content provider manages access to a central repository of data. We implement a provider as one or more classes in an Android application, along with elements in the manifest file. One of our classes implements a subclass `ContentProvider`, which is the interface between our provider and other applications. Although content providers are meant to make data available to other applications, we may of course have activities in our application that allow the user to query and modify the data managed by our provider.
 
 
 ## Steps for building a Content Provider
@@ -195,7 +197,7 @@ Now that we've built a URIMatcher, let's go through the detailed, end-to-end flo
 Let's say that our app is querying for data to display in the UI. First, from the UI code the app will get a `ContentResolver` and call `query()` on it, passing in the URI for the exact provider and data we want to read. Then the Resolver finds the correct content provider based on the authority of the passed in URI and passes on the query. The Provider's query function will then use the URIMatcher we've built to decide how to react to the passed in URI and determine what kind of data to retrieve. Whether that's one row of data or the directory of all data or some other specific selection. Based on the match, the query function will basically translate the URI and other parameters into the correct SQL code for selected data.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/resolver-to-database-flow.png" alt="ContentResolver to Database flow" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/resolver-to-database-flow.png" alt="ContentResolver to Database flow"/>
 </p>
 
 So, using the `UriMatcher` and the code for our query, the provider will then retrieve the desired data from the underlying database. Then the call travels all the way back to the Resolver in our UI code and returns a cursor with that data, and this is how all calls from our UI to the database will function, passing through the provider to reach the database.
@@ -203,7 +205,7 @@ So, using the `UriMatcher` and the code for our query, the provider will then re
 There are six functions that every `ContentProvider` is required to have. The first is `onCreate()`, which initializes the provider, and which we've already implemented. Then there are the four so-called *CRUD methods*, where CRUD stands for create, read, update and delete. And these are the four main functions used for persistent data storage.
 
 <p align="center">
-<img src="https://github.com/fjoglar/android-dev-challenge/blob/master/assets/images/overview-provider-functions.png" alt="Overview of Provider Functions" style="width: 10px;"/>
+<img src="{{site.baseurl}}/assets/images/overview-provider-functions.png" alt="Overview of Provider Functions"/>
 </p>
 
 
@@ -496,6 +498,3 @@ public class TaskContentProvider extends ContentProvider {
 [`UriMatcher` reference](https://developer.android.com/reference/android/content/UriMatcher.html)<br>
 [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)<br>
 [Steps for creating a Content Provider](https://medium.com/@paulnunezm/steps-for-creating-a-content-provider-ab376d661613) by Paul Núñez
-
-
-###### Note: the images of the headers used in this serie of articles are from Udacity's [Developing Android Apps Course](https://www.udacity.com/course/new-android-fundamentals--ud851)
