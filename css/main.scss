@@ -612,3 +612,51 @@ a img{
   margin-bottom: 40px;
   z-index: 900;
 }
+
+/* Content adjustments */
+.docs-content-grid {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@media (min-width: 840px) {
+  .mdl-grid {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 839px) and (min-width: 480px) {
+  .mdl-grid {
+    padding: 0px;
+  }
+  
+  .go-up-button {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    z-index: 900;
+  }
+}
+
+@media (max-width: 480px) {
+  .mdl-grid {
+    padding: 0px;
+  }
+  
+  .navigation-button {
+    width: 150px;
+  }
+  
+  .go-up-button {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    z-index: 900;
+  }
+}
