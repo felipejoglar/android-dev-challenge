@@ -18,6 +18,13 @@
       </main>
       <div class="mdl-layout--large-screen-only">{% include footer.html %}</div>
     </div>
+    {% if page.layout == 'post' %}
+    <a href="#">
+      <button class="go-up-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
+        <i class="material-icons">arrow_upwards</i>
+      </button>
+    </a>
+    {% endif %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
