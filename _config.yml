@@ -4,6 +4,7 @@ email: your-email@domain.com
 description: Google Android Developer Challenge Schoolarship by Udacity 2017 - 2018
 baseurl: "/android-dev-challenge"
 url: "https://fjoglar.github.io"
+gaid: UA-106863743-1
 
 # Build settings
 markdown: kramdown
